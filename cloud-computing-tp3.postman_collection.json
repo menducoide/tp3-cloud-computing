@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "fbd1bcf2-884d-409d-9a87-bdb8eb3222bc",
+		"name": "cloud-computing-tp3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "UpdateEnvioPendiente",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/envios/9ff4221f-3624-4f25-964a-77a8d6ae795a/entregado",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"envios",
+						"9ff4221f-3624-4f25-964a-77a8d6ae795a",
+						"entregado"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetEnvioById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/envio/9ff4221f-3624-4f25-964a-77a8d6ae795a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"envio",
+						"9ff4221f-3624-4f25-964a-77a8d6ae795a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListPendientes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/envios/pendientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"envios",
+						"pendientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateEnvio",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"destino\" : \"Destino_1\",\r\n    \"email\" : \"email_1@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/envios/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"envios",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
