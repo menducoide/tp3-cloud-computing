@@ -1,5 +1,8 @@
 const { docClient } = require("./dynamo-config");
-const { Guid } = require("js-guid");
+const { 
+  v1: uuidv1,
+  v4: uuidv4,
+} = require('uuid')
 
 const getById = (_id) => {
   const params = {
@@ -58,7 +61,7 @@ const create = (data) => {
   const params = {
     TableName: "Envio",
     Item: {
-      id: new Guid().toString(),
+      id:  uuidv4(),
       fechaAlta: new Date().toISOString(),
       ...JSON.parse(data),
       pendiente: new Date().toISOString(),
